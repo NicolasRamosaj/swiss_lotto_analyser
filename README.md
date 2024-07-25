@@ -1,0 +1,1 @@
+## Swiss lotto analyser
