@@ -20,6 +20,21 @@ from selenium.webdriver.firefox.options import Options
 
 # ---------------------------------------------------------------------------
 
+
+@st.experimental_singleton
+def installff():
+  os.system('sbase install geckodriver')
+  os.system('ln -s /home/appuser/venv/lib/python3.7/site-packages/seleniumbase/drivers/geckodriver /home/appuser/venv/bin/geckodriver')
+
+try:
+    _ = installff()
+except:
+    print("Installation of Selenium does not work")
+
+# ---------------------------------------------------------------------------
+
+
+
 total_number = 42
 total_lucky = 6
 
