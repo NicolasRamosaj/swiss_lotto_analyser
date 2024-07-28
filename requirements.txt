@@ -3,6 +3,4 @@ pandas==1.5.3
 plotly==5.13.1
 scipy==1.12.0
 selenium==4.21.0
-seleniumbase
 streamlit==1.23.0
-webdriver-manager
