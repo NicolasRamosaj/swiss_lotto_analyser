@@ -210,7 +210,7 @@ st.title("Swiss Lotto Analyser")
 
 if 'my_draw' not in st.session_state:
     st.session_state.prob_by_unique = count_unique(df=st.session_state.data_lotto.drop(columns=['Lucky']))
-    st.session_state.prob_by_freq, st.session_state.drawn_gap = count_frequency_poisson(df=st.session_state.data_lotto)
+    st.session_state.prob_by_freq, st.session_state.drawn_gap = count_frequency_poisson(df=st.session_state.data_lotto.drop(columns=['Lucky']))
     st.session_state.my_draw = check_and_sort_draws(data=generate_draw(),
                                                     prob_by_unique=st.session_state.prob_by_unique,
                                                     prob_by_freq=st.session_state.prob_by_freq).drop(
